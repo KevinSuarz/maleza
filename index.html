@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bike Life</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&family=Raleway:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/Styles/main.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav layout">
+        <div class="mobile">
+          <div class="mobile__header">
+            <div class="mobile__logo">
+              <img
+                src="src/img/Logo.png"
+                alt="Bike Life Logo"
+                class="mobile__img"
+              />
+            </div>
+            <div class="mobile__more">
+              <button id="bmore">
+                <span class="material-icons" style="font-size: 40px">
+                  menu
+                </span>
+              </button>
+            </div>
+          </div>
+          <div id="links" class="mobile__links collapsed">
+            <a href="#inicio">INICIO</a>
+            <a href="#">Products</a>
+            <a href="#">Designs</a>
+            <a href="#">About Us</a>
+            <a href="#">Contac Us</a>
+            <a href="#">Legal Info</a>
+          </div>
+        </div>
+
+        <div class="desktop">
+          <div class="desktop__logo">
+            <img src="src/img/Logo.png" alt="BikeLife" />
+          </div>
+          <div class="desktop__links">
+            <a href="#inicio">INICIO</a>
+            <a href="#servicios">SERVICIOS</a>
+            <a href="#productos">PRODUCTOS</a>
+            <a href="#acerca">ACERCA</a>
+            <a href="#contacto">CONTACTO</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section id="inicio" class="inicio">
+      <div class="hero layout">
+        <div class="hero__bike">
+          <img src="src/img/Hero-bike.png" alt="Bicicleta Clasica" />
+          <div class="hero__images">
+            <img src="src/img/break-bike.avif" alt="Breaks" />
+            <img src="src/img/gear-bike.avif" alt="Gear bike" />
+            <img src="src/img/first-bike.jpg.avif" alt="Profile bike" />
+          </div>
+        </div>
+        <div class="hero__description">
+          <h2>Bike Life</h2>
+          <h4>TU VIDA EN DOS RUEDAS</h4>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt,
+            ducimus voluptatibus dolorem dolorum illo necessitatibus, eum
+            voluptate excepturi harum magnam tenetur ea ab repudiandae nobis
+            accusantium minima eos perferendis nesciunt!
+          </p>
+          <a href="#" class="btn hero__btn">More</a>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const bmore = document.querySelector("#bmore");
+      const links = document.querySelector("#links");
+
+      bmore.addEventListener("click", (e) => {
+        links.classList.toggle("collapsed");
+      });
+    </script>
+  </body>
+</html>
