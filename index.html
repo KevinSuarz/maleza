@@ -14,43 +14,40 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="src/Styles/main.css" />
+    <link rel="stylesheet" href="public/output.css" />
   </head>
-  <body>
-    <header class="header">
-      <nav class="nav layout">
-        <div class="mobile">
-          <div class="mobile__header">
-            <div class="mobile__logo">
-              <img
-                src="src/img/Logo.png"
-                alt="Bike Life Logo"
-                class="mobile__img"
-              />
-            </div>
+  <body class="bg-amber-100">
+
+    <header class="header relative top-0 left-0 w-full bg-amber-800">
+      <nav class="nav">
+        <div class="mobile lg:hidden container mx-auto relative">
+          <div class="mobile__header flex justify-between items-center bg-amber-800 z-10 relative">
+            <img
+              src="src/img/Logo.png"
+              alt="Bike Life Logo"
+              class="mobile__img h-20"
+            />
             <div class="mobile__more">
               <button id="bmore">
-                <span class="material-icons" style="font-size: 40px">
+                <span class="material-icons text-amber-50 mr-6" style="font-size: 40px">
                   menu
                 </span>
               </button>
             </div>
           </div>
-          <div id="links" class="mobile__links collapsed">
-            <a href="#inicio">INICIO</a>
-            <a href="#">Products</a>
-            <a href="#">Designs</a>
-            <a href="#">About Us</a>
-            <a href="#">Contac Us</a>
-            <a href="#">Legal Info</a>
+          <div id="links" class="mobile__links w-48 bg-amber-700 text-zinc-50 absolute right-0 z-1 transition-all ease-in-out duration-500 hidden">
+            <a href="#inicio" class="block text-center">INICIO</a>
+            <a href="#" class="block text-center">Products</a>
+            <a href="#" class="block text-center">Designs</a>
+            <a href="#" class="block text-center">About Us</a>
+            <a href="#" class="block text-center">Contac Us</a>
           </div>
         </div>
 
-        <div class="desktop">
-          <div class="desktop__logo">
-            <img src="src/img/Logo.png" alt="BikeLife" />
-          </div>
-          <div class="desktop__links">
-            <a href="#inicio">INICIO</a>
+        <div class="desktop hidden lg:flex justify-between items-center container mx-auto text-zinc-50">
+          <img src="src/img/Logo.png" alt="BikeLife" class="h-20"/>
+          <div class="desktop__links flex gap-6 mr-8">
+            <a href="#inicio" class="hover:bg-zinc-100 hover:text-black rounded px-4 transition-all ease-in duration-200">INICIO</a>
             <a href="#servicios">SERVICIOS</a>
             <a href="#productos">PRODUCTOS</a>
             <a href="#acerca">ACERCA</a>
@@ -60,39 +57,43 @@
       </nav>
     </header>
 
-    <section id="inicio" class="inicio">
-      <div class="hero layout">
-        <div class="hero__bike">
-          <img src="src/img/Hero-bike.png" alt="Bicicleta Clasica" />
-          <div class="hero__images">
-            <img src="src/img/break-bike.avif" alt="Breaks" />
-            <img src="src/img/gear-bike.avif" alt="Gear bike" />
-            <img src="src/img/first-bike.jpg.avif" alt="Profile bike" />
-          </div>
-        </div>
-        <div class="hero__description">
-          <h2>Bike Life</h2>
-          <h4>TU VIDA EN DOS RUEDAS</h4>
-          <p>
+    <section id="inicio" class="inicio w-full relative">
+      <div class="video absolute top-0 left-0 w-full h-full bg-sky-200">
+        <video src="">
+
+        </video>
+      </div>
+      <div class="hero container flex mx-auto py-5 flex-wrap-reverse justify-evenly  items-center w-full">
+        <div class="hero__description  min-w-min grow flex justify-center relative">
+          <div class="w-80 bg-amber-900 rounded-xl p-6 shadow-black">
+            <h2 class="text-4xl font-black text-zinc-50 my-4 text-center">Bike Life</h2>
+            <h4 class="text-2xl border-y border-zinc-50 p-2 text-zinc-50 font-bold text-center">TU VIDA EN DOS RUEDAS</h4>
+            <p class="py-4 text-zinc-50">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt,
             ducimus voluptatibus dolorem dolorum illo necessitatibus, eum
             voluptate excepturi harum magnam tenetur ea ab repudiandae nobis
             accusantium minima eos perferendis nesciunt!
-          </p>
-          <a href="#" class="btn hero__btn">More</a>
+            </p>
+            <a href="#" class="rounded bg-zinc-50 px-6 py-2 m-10 hover:bg-yellow-300">More</a>
+          </div>
+        </div>
+        <div class="hero__bike w-80 sm:w-96 md:grow flex justify-end relative">
+          <img class="md:grow max" src="src/img/Hero-bike.png" alt="Bicicleta Clasica" />
+          <div class="hero__images absolute flex flex-col right-0 gap-4 w-3/4 group h-full items-end">
+            <img class="group-hover:block hidden w-24 sm:w-24 md:w-32 lg:w-44 rounded-full shadow-md border-4 border-amber-800" src="src/img/break-bike.avif" alt="Breaks" />
+            <img class="group-hover:block hidden w-24 sm:w-24 md:w-32 lg:w-44 rounded-full shadow-md border-4 border-amber-800" src="src/img/gear-bike.avif" alt="Gear bike" />
+            <img class="group-hover:block hidden w-24 sm:w-24 md:w-32 lg:w-44 rounded-full shadow-md border-4 border-amber-800" src="src/img/first-bike.jpg.avif" alt="Profile bike" />
+          </div>
         </div>
       </div>
-    </section>
-    <section>
-      <a href="">jajaj</a>
     </section>
 
     <script>
       const bmore = document.querySelector("#bmore");
       const links = document.querySelector("#links");
 
-      bmore.addEventListener("click", (e) => {
-        links.classList.toggle("collapsed");
+      bmore.addEventListener("click", (e) => { 
+        links.classList.toggle("hidden");
       });
     </script>
   </body>
