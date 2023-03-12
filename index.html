@@ -18,24 +18,24 @@
   </head>
   <body class="bg-amber-100">
 
-    <header class="header relative top-0 left-0 w-full bg-amber-800">
+    <header class="relative top-0 left-0 w-full header bg-amber-800">
       <nav class="nav">
-        <div class="mobile lg:hidden container mx-auto relative">
-          <div class="mobile__header flex justify-between items-center bg-amber-800 z-10 relative">
+        <div class="container relative mx-auto mobile lg:hidden">
+          <div class="relative z-10 flex items-center justify-between mobile__header bg-amber-800">
             <img
               src="src/img/Logo.png"
               alt="Bike Life Logo"
-              class="mobile__img h-20"
+              class="h-20 mobile__img"
             />
             <div class="mobile__more">
               <button id="bmore">
-                <span class="material-icons text-amber-50 mr-6" style="font-size: 40px">
+                <span class="mr-6 material-icons text-amber-50" style="font-size: 40px">
                   menu
                 </span>
               </button>
             </div>
           </div>
-          <div id="links" class="mobile__links w-48 bg-amber-700 text-zinc-50 absolute right-0 z-1 transition-all ease-in-out duration-500 hidden">
+          <div id="links" class="absolute right-0 hidden w-48 transition-all duration-500 ease-in-out mobile__links bg-amber-700 text-zinc-50 z-1">
             <a href="#inicio" class="block text-center">INICIO</a>
             <a href="#" class="block text-center">Products</a>
             <a href="#" class="block text-center">Designs</a>
@@ -44,10 +44,10 @@
           </div>
         </div>
 
-        <div class="desktop hidden lg:flex justify-between items-center container mx-auto text-zinc-50">
+        <div class="container items-center justify-between hidden mx-auto desktop lg:flex text-zinc-50">
           <img src="src/img/Logo.png" alt="BikeLife" class="h-20"/>
-          <div class="desktop__links flex gap-6 mr-8">
-            <a href="#inicio" class="hover:bg-zinc-100 hover:text-black rounded px-4 transition-all ease-in duration-200">INICIO</a>
+          <div class="flex gap-6 mr-8 desktop__links">
+            <a href="#inicio" class="px-4 transition-all duration-200 ease-in rounded hover:bg-zinc-100 hover:text-black">INICIO</a>
             <a href="#servicios">SERVICIOS</a>
             <a href="#productos">PRODUCTOS</a>
             <a href="#acerca">ACERCA</a>
@@ -57,36 +57,38 @@
       </nav>
     </header>
 
-    <section id="inicio" class="inicio w-full relative">
-      <div class="video absolute top-0 left-0 w-full h-full bg-sky-200">
+    <section id="inicio" class="relative w-full inicio">
+      <div class="absolute top-0 left-0 w-full h-full video bg-sky-200">
         <video src="">
 
         </video>
-      </div>
-      <div class="hero container flex mx-auto py-5 flex-wrap-reverse justify-evenly  items-center w-full">
-        <div class="hero__description  min-w-min grow flex justify-center relative">
-          <div class="w-80 bg-amber-900 rounded-xl p-6 shadow-black">
-            <h2 class="text-4xl font-black text-zinc-50 my-4 text-center">Bike Life</h2>
-            <h4 class="text-2xl border-y border-zinc-50 p-2 text-zinc-50 font-bold text-center">TU VIDA EN DOS RUEDAS</h4>
+      </div> 
+      <div class="container flex flex-wrap-reverse items-center w-full py-5 mx-auto hero justify-evenly">
+        <div class="relative flex justify-center hero__description min-w-min grow">
+          <div class="p-6 w-80 bg-amber-900 rounded-xl shadow-black">
+            <h2 class="my-4 text-4xl font-black text-center text-zinc-50">Bike Life</h2>
+            <h4 class="p-2 text-2xl font-bold text-center border-y border-zinc-50 text-zinc-50">TU VIDA EN DOS RUEDAS</h4>
             <p class="py-4 text-zinc-50">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt,
             ducimus voluptatibus dolorem dolorum illo necessitatibus, eum
             voluptate excepturi harum magnam tenetur ea ab repudiandae nobis
             accusantium minima eos perferendis nesciunt!
             </p>
-            <a href="#" class="rounded bg-zinc-50 px-6 py-2 m-10 hover:bg-yellow-300">More</a>
+            <a href="#" class="px-6 py-2 m-10 rounded bg-zinc-50 hover:bg-yellow-300">More</a>
           </div>
         </div>
-        <div class="hero__bike w-80 sm:w-96 md:grow flex justify-end relative">
+        <div class="relative flex justify-end hero__bike w-80 sm:w-96 md:grow">
           <img class="md:grow max" src="src/img/Hero-bike.png" alt="Bicicleta Clasica" />
-          <div class="hero__images absolute flex flex-col right-0 gap-4 w-3/4 group h-full items-end">
-            <img class="group-hover:block hidden w-24 sm:w-24 md:w-32 lg:w-44 rounded-full shadow-md border-4 border-amber-800" src="src/img/break-bike.avif" alt="Breaks" />
-            <img class="group-hover:block hidden w-24 sm:w-24 md:w-32 lg:w-44 rounded-full shadow-md border-4 border-amber-800" src="src/img/gear-bike.avif" alt="Gear bike" />
-            <img class="group-hover:block hidden w-24 sm:w-24 md:w-32 lg:w-44 rounded-full shadow-md border-4 border-amber-800" src="src/img/first-bike.jpg.avif" alt="Profile bike" />
+          <div class="absolute right-0 flex flex-col items-end w-3/4 h-full gap-4 hero__images group">
+            <img class="hidden w-24 border-4 rounded-full shadow-md group-hover:block sm:w-24 md:w-32 lg:w-44 border-amber-800" src="src/img/break-bike.avif" alt="Breaks" />
+            <img class="hidden w-24 border-4 rounded-full shadow-md group-hover:block sm:w-24 md:w-32 lg:w-44 border-amber-800" src="src/img/gear-bike.avif" alt="Gear bike" />
+            <img class="hidden w-24 border-4 rounded-full shadow-md group-hover:block sm:w-24 md:w-32 lg:w-44 border-amber-800" src="src/img/first-bike.jpg.avif" alt="Profile bike" />
           </div>
         </div>
       </div>
     </section>
+
+    <h3 class="p-4  [width:1800px;] bg-emerald-300">prueba</h3>
 
     <script>
       const bmore = document.querySelector("#bmore");
